@@ -1,6 +1,7 @@
 import {
     Button,
     ButtonGroup,
+    Flex,
     Grid,
     GridItem,
     HStack,
@@ -49,7 +50,7 @@ function App() {
                 </GridItem>
             </Show>
             <GridItem area="main">
-                <HStack spacing={5} paddingLeft={2} marginBottom={5}>
+                <Flex gap={5} paddingLeft={2} marginBottom={5}>
                     <PlatformSelector
                         selectedPlatform={gameQuery.platform}
                         onSelectPlatform={(platform) =>
@@ -62,7 +63,7 @@ function App() {
                             setGameQuery({ ...gameQuery, sortOrder })
                         }
                     ></SortSelector>
-                </HStack>
+                </Flex>
                 <GameGrid gameQuery={gameQuery}></GameGrid>
             </GridItem>
         </Grid>
